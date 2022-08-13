@@ -16,11 +16,10 @@ router.get("/", (req, res) => {
 });
 
 router.post('/', (req, res)=> {
-        const { price, description, imgURL, category, gender, title,}= req.body
+        const {title,gender,price,description,imgURL,category,}= req.body
         try{
             con.query(
-                `INSERT INTO products (price, description, imgURL, category, gender, title,) values('${title}', '${price}', '${description}', '${imgURL}', '${category}', '${gender}'
-            )`,
+                `INSERT INTO products (title,gender,price,description,imgURL,category) values('${title}', '${gender}', '${price}', '${description}', '${imgURL}', '${category}') `,
                 (err, result) => {
                 if (err) throw err;
                 res.send(result);
