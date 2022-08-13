@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const con = require("../lib/dbConnection");
+const con = require("../lib/db_Connection");
+
 
 router.get("/", (req, res) => {
     try {
