@@ -12,7 +12,7 @@ const staticPath = path.join(__dirname + "public");
 app.use(express.static(staticPath));
 
 app.get("/", (req, res) => {
-    res.json({ msg: "Welcome" });
+  res.json({ msg: "Welcome" });
 });
 
 const productsRoute = require("./routes/productsRoute");
@@ -24,6 +24,6 @@ app.get("products", function (req, res) {
 });
 
 app.listen(app.get("port"), () => {
-    console.log(`Listening for calls on port ${app.get("port")}`);
-    console.log("Press Ctrl+C to exit server");
+  console.log(`http://localhost:${app.get("port")}`);
+  console.log("Press Ctrl+C to exit server");
 });
