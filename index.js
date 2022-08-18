@@ -18,6 +18,9 @@ app.get("/", (req, res) => {
 const productsRoute = require("./routes/productsRoute");
 app.use("/products", productsRoute);
 
+const userRoute = require("./routes/userRoute");
+app.use("/users", userRoute);
+
 app.use(express.static("public"));
 app.get("products", function (req, res) {
   res.sendFile(_dirname + "/" + "product.html");
