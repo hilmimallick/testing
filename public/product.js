@@ -15,7 +15,7 @@ function showproducts(products) {
       <div class="card" style="width: 18rem;">
   <img src="${product.imgURL}" class="card-img-top">
   <div class="card-body">
-    <p class="card-text">${product.title}</p>
+    <p class="card-text">${product.title}</p>  
     <p class="card-text">${product.category}</p>
     <p class="card-text">R${product.price}</p>
     <p class="card-text">${product.description}</p>
@@ -25,4 +25,10 @@ function showproducts(products) {
 </div>
     `;
   });
+}
+
+function addProduct() {
+  const task = document.querySelector(addpro).value;
+
+  const todo = {};
 }
